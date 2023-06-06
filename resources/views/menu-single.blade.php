@@ -159,7 +159,7 @@
             document.getElementById("aromaticityMenu").innerHTML = ''
             document.getElementById("oillinessMenu").innerHTML = ''
             cat = document.getElementById("formMenu").action
-            cat = cat.replace('0', 1);
+            cat = cat.replace('0', data['id']);
             console.log(cat)
             document.getElementById("formMenu").action = cat
 
