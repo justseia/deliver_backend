@@ -3,13 +3,6 @@
 @section('content')
     <section class="mx-auto w-[1180px] mt-[100px] mb-[150px]">
         <div class="font-medium text-[18px] mb-[10px]">Restaurants</div>
-        <form action="{{ route('home.index') }}">
-            <select onchange="this.form.submit()" class="border border-gray-500 w-[255px] h-[40px] rounded-[10px] px-[20px] mb-[170px]">
-                <option selected>Filter</option>
-                <option value="abc">A-Z</option>
-                <option value="raiting">Raiting</option>
-            </select>
-        </form>
         <div class="grid grid-cols-4 gap-[24px]">
             @foreach($restaurants as $restaurant)
                 <div class="bg-white border border-gray-200 rounded-[10px] shadow">
