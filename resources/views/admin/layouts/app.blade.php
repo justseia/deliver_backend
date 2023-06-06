@@ -14,7 +14,7 @@
         <div class="flex items-center justify-between">
             <div class="flex items-center justify-start">
                 <a href="{{ route('admin.index') }}" class="ml-4 text-md font-semibold flex items-center lg:mr-1.5">
-                    <span class="self-center hidden text-xl font-bold md:inline-block whitespace-nowrap">Alemtime</span>
+                    <span class="self-center hidden text-xl font-bold md:inline-block whitespace-nowrap">Deliver</span>
                 </a>
             </div>
             <div class="ml-3">
@@ -35,10 +35,6 @@
                             <a href="{{ route('admin.index') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Главный</a>
                             <a href="{{ route('admin.posts') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Посты</a>
                             <a href="{{ route('admin.users') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Пользователи</a>
-                            <a href="{{ route('admin.ad') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Реклама</a>
-                            <a href="{{ route('admin.quote') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Цитаты</a>
-                            <a href="{{ route('admin.category') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Категроии</a>
-                            <a href="{{ route('admin.deleted') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Удаленный посты</a>
                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Выйти</a>
                             <form id="logout-form" class="hidden" action="{{ route('logout') }}" method="POST">
                                 @csrf
@@ -91,31 +87,6 @@
                                 <span class="ml-3 text-sm font-light text-dark-500">Orders</span>
                             </a>
                         </li>
-                        {{--                            <li>--}}
-                        {{--                                <a href="{{ route('admin.ad') }}" class="flex items-center py-2.5 px-4 text-base font-normal text-dark-500 rounded-lg hover:bg-gray-200  group transition-all duration-200">--}}
-                        {{--                                    <div class="grid w-8 h-8 mr-1 text-center bg-white rounded-lg shadow-lg shadow-gray-300 text-dark-700 place-items-center">--}}
-                        {{--                                        <i class="fas fa-ad"></i>--}}
-                        {{--                                    </div>--}}
-                        {{--                                    <span class="ml-3 text-sm font-light text-dark-500">Реклама</span>--}}
-                        {{--                                </a>--}}
-                        {{--                            </li>--}}
-
-                        {{--                            <li>--}}
-                        {{--                                <a href="{{ route('admin.category') }}" class="flex items-center py-2.5 px-4 text-base font-normal text-dark-500 rounded-lg hover:bg-gray-200  group transition-all duration-200">--}}
-                        {{--                                    <div class="grid w-8 h-8 mr-1 text-center bg-white rounded-lg shadow-lg shadow-gray-300 text-dark-700 place-items-center">--}}
-                        {{--                                        <i class="fas fa-th-list"></i>--}}
-                        {{--                                    </div>--}}
-                        {{--                                    <span class="ml-3 text-sm font-light text-dark-500">Категория</span>--}}
-                        {{--                                </a>--}}
-                        {{--                            </li>--}}
-                        {{--                            <li>--}}
-                        {{--                                <a href="{{ route('admin.deleted') }}" class="flex items-center py-2.5 px-4 text-base font-normal text-dark-500 rounded-lg hover:bg-gray-200  group transition-all duration-200">--}}
-                        {{--                                    <div class="grid w-8 h-8 mr-1 text-center bg-white rounded-lg shadow-lg shadow-gray-300 text-dark-700 place-items-center">--}}
-                        {{--                                        <i class="fas fa-trash"></i>--}}
-                        {{--                                    </div>--}}
-                        {{--                                    <span class="ml-3 text-sm font-light text-dark-500">Удаленный посты</span>--}}
-                        {{--                                </a>--}}
-                        {{--                            </li>--}}
                     </ul>
                 </div>
             </div>
@@ -125,10 +96,6 @@
         @yield('content')
     </div>
 </div>
-
-@if (session('status'))
-    {{--        <x-alert :status="session('status')" :message="session('message')" />--}}
-@endif
 
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css"/>
 <script src="{{ asset('assets/js/jquery.min.js') }}"></script>

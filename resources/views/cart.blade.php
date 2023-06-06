@@ -17,7 +17,7 @@
         <div class="mb-[65px] flex flex-col gap-[24px]">
             @foreach($carts as $cart)
                 <div class="flex w-full justify-between rounded-[15px] bg-white p-6 shadow-lg">
-                    <img src="https://sayavegan.com/wp-content/uploads/2022/05/DSC05908-removebg-preview.png" alt="product-image" class="w-full rounded-lg sm:w-40"/>
+                    <img src="https://sayavegan.com/wp-content/uploads/2022/05/DSC05908-removebg-preview.png" alt="product-image" class="w-full rounded-lg sm:w-40 object-cover object-center"/>
                     <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
                         <div class="flex flex-col justify-center">
                             <h2 class="text-lg font-bold">{{ $cart->menu->name }}</h2>

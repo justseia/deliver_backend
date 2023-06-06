@@ -5,10 +5,10 @@
         <div class="font-black text-[24px] mb-[30px] ">Our Blogs</div>
         <div class="grid grid-cols-4 gap-[40px]">
             <div class="col-span-1 grid grid-cols-1 gap-[24px] auto-rows-min">
-                @foreach($recipes as $blog)
+                @foreach($recipes_1 as $blog)
                     <div class="bg-white border border-gray-200 rounded-[10px] shadow">
-                        <a href="{{ route('recipe.show', 1) }}">
-                            <img class="rounded-t-[10px] h-[250px] w-full object-cover"
+                        <a href="{{ route('recipe.show', $blog->id) }}">
+                            <img class="rounded-t-[10px] h-[250px] w-full  object-cover object-center"
                                  src="{{ $blog->image }}"
                                  alt=""/>
                         </a>
@@ -24,9 +24,9 @@
                 @endforeach
             </div>
             <div class="col-span-2 grid grid-cols-1 gap-[24px] auto-rows-min">
-                @foreach($recipes as $blog)
+                @foreach($recipes_2 as $blog)
                     <div class="bg-white border border-gray-200 rounded-[10px] shadow">
-                        <a href="{{ route('recipe.show', 1) }}">
+                        <a href="{{ route('recipe.show', $blog->id) }}">
                             <img class="rounded-t-[10px] h-[420px] w-full object-cover"
                                  src="{{ $blog->image }}"
                                  alt=""/>
@@ -43,9 +43,9 @@
                 @endforeach
             </div>
             <div class="col-span-1 grid grid-cols-1 gap-[24px] auto-rows-min">
-                @foreach($recipes as $blog)
+                @foreach($recipes_3 as $blog)
                     <div class="bg-white border border-gray-200 rounded-[10px] shadow">
-                        <a href="{{ route('recipe.show', 1) }}">
+                        <a href="{{ route('recipe.show', $blog->id) }}">
                             <img class="rounded-t-[10px] h-[250px] w-full object-cover"
                                  src="{{ $blog->image }}"
                                  alt=""/>

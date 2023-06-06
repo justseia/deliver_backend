@@ -14,7 +14,7 @@
             @foreach($restaurants as $restaurant)
                 <div class="bg-white border border-gray-200 rounded-[10px] shadow">
                     <a href="{{ route('menu.show', $restaurant) }}">
-                        <img class="rounded-t-[10px] h-[250px] w-[277px]" src="{{ $restaurant->image }}" alt=""/>
+                        <img class="rounded-t-[10px] h-[250px] w-[277px] object-cover object-center" src="{{ $restaurant->image }}" alt=""/>
                     </a>
                     <div class="px-[40px] py-5">
                         <a href="#">

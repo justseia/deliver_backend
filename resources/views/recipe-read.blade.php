@@ -1,10 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-    <div>
-        <img src="https://food-guide.canada.ca/sites/default/files/styles/snapshot_recomendation_581_x_290_/public/2020-07/eat_meals_with_others.png" alt="img" class="h-[475px] w-full object-cover object-center" />
-        <div class="">
-            <div></div>
+    <div class="pt-[20px]">
+        <img src="{{ $recipe->image }}" alt="img" class="h-[475px] w-full object-cover object-center"/>
+        <div class="w-[800px] mx-auto">
+            <div class="pt-[70px] pb-[80px]">
+                <div class="font-medium text-[48px] mb-[30px]">{{ $recipe->name }}</div>
+                <div class="font-normal text-[18px] whitespace-pre-line">{{ $recipe->body }}</div>
+            </div>
+        </div>
+        <div class="py-[50px]">
+            <livewire:show-category/>
         </div>
     </div>
 @endsection
