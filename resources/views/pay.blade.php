@@ -52,7 +52,7 @@
                     </div>
                     <div class="mb-[20px] flex justify-between text-[18px] font-medium">
                         <div>Sub total</div>
-                        <div>{{ $sum_cart }} KZT</div>
+                        <div>{{ $sum_cart - 1000 }} KZT</div>
                     </div>
                     <div class="mb-[20px] flex justify-between text-[18px] font-medium">
                         <div>Shipping</div>
