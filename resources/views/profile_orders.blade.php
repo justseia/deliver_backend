@@ -39,7 +39,7 @@
                         <p class="text-sm">{{ $order->menu->created_at->isoFormat('LL') }}</p>
                     </div>
                     <div class="flex items-center">
-                        <p class="text-sm">{{ $order->menu->cost }}KZT</p>
+                        <p class="text-sm">{{ $order->cost }}KZT</p>
                     </div>
                 </div>
             </div>

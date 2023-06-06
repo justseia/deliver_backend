@@ -91,12 +91,22 @@ class CartController extends Controller
 
     public function order()
     {
+        $user_id = auth()->user()->id;
+        $carts = Cart::where('user_id', $user_id)->get();
+        $sum_cart = $carts->sum(function ($cart) {
+            return $cart->menu->cost * $cart->count;
+        });
+        $sum_cart += 1000;
+        if ($sum_cart >= 30000) {
+            $sum_cart = $sum_cart * 0.9;
+        }
         $cart = Cart::where('user_id', auth()->user()->id)->first();
         $cart->delete();
         Order::create([
             'user_id' => auth()->user()->id,
             'menu_id' => 1,
             'status' => 3,
+            'cost' => $sum_cart,
         ]);
         return redirect()->route('profile.info');
     }

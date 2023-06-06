@@ -16,6 +16,7 @@ return new class extends Migration
             $table->integer('user_id');
             $table->integer('menu_id');
             $table->integer('status')->default(3);
+            $table->integer('cost');
             $table->timestamps();
         });
     }

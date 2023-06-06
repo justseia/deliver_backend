@@ -17,26 +17,26 @@
             <div class="grid grid-cols-4 gap-[24px]">
                 @foreach($menus as $menu)
                     <div class="relative rounded-[50px] border border-gray-200 shadow-lg">
-                        <form class="absolute top-[25px] left-[25px]" method="post" action="{{ route('profile.favorite.add', $menu) }}">
-                            @csrf
-                            <button type="submit">
-                                @auth
-                                    @if($menu->isFavoritedBy(auth()->user()))
-                                        <img src="{{ asset('assets/img/favorite_full.svg') }}" alt=""/>
-                                    @else
-                                        <img src="{{ asset('assets/img/favorite.svg') }}" alt=""/>
-                                    @endif
-                                @else
-                                    <img src="{{ asset('assets/img/favorite.svg') }}" alt=""/>
-                                @endauth
-                            </button>
-                        </form>
                         <a href="javascript:show({{$menu}})">
-                            <img class="h-[250px] object-cover object-center" src="{{ $menu->image }}" alt="img"/>
+                            <img class="h-[250px] object-cover object-center w-full" src="{{ $menu->image }}" alt="img"/>
                         </a>
                         <div class="px-[40px] py-5">
                             <h5 class="mb-2 text-[16px] tracking-tight text-gray-900">{{ $menu->name }}</h5>
                             <div>{{ $menu->cost }}KZT</div>
+                            <form class="absolute top-[25px] left-[25px]" method="post" action="{{ route('profile.favorite.add', $menu) }}">
+                                @csrf
+                                <button type="submit">
+                                    @auth
+                                        @if($menu->isFavoritedBy(auth()->user()))
+                                            <img src="{{ asset('assets/img/favorite_full.svg') }}" alt=""/>
+                                        @else
+                                            <img src="{{ asset('assets/img/favorite.svg') }}" alt=""/>
+                                        @endif
+                                    @else
+                                        <img src="{{ asset('assets/img/favorite.svg') }}" alt=""/>
+                                    @endauth
+                                </button>
+                            </form>
                         </div>
                     </div>
                 @endforeach
@@ -154,13 +154,13 @@
 
     <script>
         function show(data) {
-
             document.getElementById("sweetnessMenu").innerHTML = ''
             document.getElementById("acidityMenu").innerHTML = ''
             document.getElementById("aromaticityMenu").innerHTML = ''
             document.getElementById("oillinessMenu").innerHTML = ''
             cat = document.getElementById("formMenu").action
-            cat = cat.replace('0', data['id']);
+            cat = cat.replace('0', 1);
+            console.log(cat)
             document.getElementById("formMenu").action = cat
 
             for (let i = 0; i < data['sweetness']; i++) {

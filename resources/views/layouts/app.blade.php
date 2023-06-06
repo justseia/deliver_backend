@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tandyr</title>
     <link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
+{{--    <link rel="icon" href="{{ asset('build/assets/.css') }}">--}}
+{{--    <script src="{{ asset('build/assets/.js') }}"></script>--}}
     @vite('resources/css/app.css')
     @livewireStyles
 </head>

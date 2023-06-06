@@ -2,12 +2,12 @@
 
 @section('content')
     <section class="mx-auto w-[1180px] mt-[100px] mb-[150px]">
-        <div class="font-medium text-[18px] mb-[10px]">Restaurants</div>
+        <div class="font-medium text-[18px] mb-[40px]">Restaurants</div>
         <div class="grid grid-cols-4 gap-[24px]">
             @foreach($restaurants as $restaurant)
                 <div class="bg-white border border-gray-200 rounded-[10px] shadow">
                     <a href="{{ route('menu.show', $restaurant) }}">
-                        <img class="rounded-t-[10px] h-[250px] w-[277px] object-cover object-center" src="{{ $restaurant->image }}" alt=""/>
+                        <img class="rounded-t-[10px] h-[250px] w-[277px] object-cover object-center w-full" src="{{ $restaurant->image }}" alt=""/>
                     </a>
                     <div class="px-[40px] py-5">
                         <a href="#">

@@ -26,5 +26,4 @@
     </section>
 
     <x-get-start/>
-
 @endsection

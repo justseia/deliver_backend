@@ -43,13 +43,6 @@
                     <div class="mb-[20px] flex justify-center">
                         <img class="h-[185px] w-[280px] object-cover" src="https://caspiannews.com/media/caspian_news/all_original_photos/1503299057_2399406_1503298772_853446besbarmak.jpg" alt="img"/>
                     </div>
-                    <div class="mb-[50px]">
-                        <div class="mb-[20px] text-[18px] font-medium">Gift Card / Discount code</div>
-                        <div class="grid grid-cols-3 gap-[20px]">
-                            <input type="text" class="col-span-2 h-[60px] w-full rounded-[5px] px-[20px]"/>
-                            <button class="rounded-[5px] border-[2px] border-[#3182CE] font-medium text-[#3182CE]">Apply</button>
-                        </div>
-                    </div>
                     <div class="mb-[20px] flex justify-between text-[18px] font-medium">
                         <div>Sub total</div>
                         <div>{{ $sum_cart - 1000 }} KZT</div>
