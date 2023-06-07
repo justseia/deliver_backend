@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin\Quote;
 
 use App\Http\Controllers\Controller;
-use App\Models\Quote;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class StoreController extends Controller
@@ -15,7 +15,7 @@ class StoreController extends Controller
 
     public function __invoke(Request $request)
     {
-        Quote::create([
+        Order::create([
             'quote' => $request->quote,
             'author' => $request->author,
         ]);
